@@ -1,6 +1,12 @@
 import { LitElement, html, css } from "lit";
 
 class MiCard extends LitElement {
+  static properties = {
+    src: { type: String },
+    titulo: { type: String },
+    descripcion: { type: String },
+  };
+
   static styles = css`
     .card {
       background: #fff;
@@ -21,26 +27,19 @@ class MiCard extends LitElement {
     .contenido {
       padding: 15px;
     }
-    h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-      color: #222;
-    }
-    p {
-      margin: 0;
-      font-size: 14px;
-      color: #666;
-    }
   `;
+
   render() {
     return html`
       <div class="card">
-        <img src="${src}" alt="${titulo}" />
+        <img src="${this.src}" alt="${this.titulo}" />
         <div class="contenido">
-          <h3>${titulo}</h3>
-          <p>${descripcion}</p>
+          <h3>${this.titulo}</h3>
+          <p>${this.descripcion}</p>
         </div>
       </div>
     `;
   }
 }
+
+customElements.define("mi-card", MiCard);
