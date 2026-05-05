@@ -1,0 +1,10 @@
+import "./components/header.js";
+import "./components/footer.js";
+import "./components/card.js";
+import "./components/cat-card.js";
+import "./pages/inicio.js";
+import "./pages/gallery.js";
+import "./pages/adopcion.js";
+import "./pages/blogs.js";
+import "./pages/contacto-page.js";
+import "./router/router.js";
