@@ -11,7 +11,7 @@ router.setRoutes([
   },
   {
     path: "/gallery",
-    component: "gallery-page",
+    component: "galeria-imagenes",
   },
   {
     path: "/direction",
